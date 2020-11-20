@@ -7,6 +7,7 @@ import pygame
 import StartScreen
 import save 
 import GlobalVar
+from make import MakeEqu
 
 
 pygame.init()  # 初始化pygame
@@ -35,11 +36,12 @@ def run():
     clock = pygame.time.Clock()
 
     sc = StartScreen.StartScreen()
-    
-    GlobalVar.ScreenSelected=GlobalVar.SCREENMAIN
+    scmake = MakeEqu.MakeScreen()
 
-    ssss = GlobalVar.SCREENMAIN
+    GlobalVar.ScreenSelected=GlobalVar.SCREENMAKE
+    #GlobalVar.ScreenSelected=GlobalVar.SCREENMAIN
 
+     
     while True:
         events = pygame.event.get()
 
@@ -50,8 +52,14 @@ def run():
         elif GlobalVar.SCREENGAME == GlobalVar.ScreenSelected:
             print("game screen")
         elif GlobalVar.SCREENMAIN == GlobalVar.ScreenSelected:
-            print("one screen")
+            # print("one screen")
+            sc.Events(events)
             sc.Render(screen)
+        elif GlobalVar.SCREENMAKE == GlobalVar.ScreenSelected:
+            # print("one screen")
+            scmake.Events(events)
+            scmake.Render(screen)
+
         for event in events:   
             if event.type == pygame.QUIT:  
                 exit(0)

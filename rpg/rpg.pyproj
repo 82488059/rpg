@@ -27,7 +27,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="conf\__init__.py" />
-    <Compile Include="equ\EquBase.py">
+    <Compile Include="equ\Equ.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="equ\__init__.py">
@@ -36,6 +36,13 @@
     <Compile Include="GlobalVar.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="group\Group.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="make\MakeEqu.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="make\__init__.py" />
     <Compile Include="role\HeroBase.py" />
     <Compile Include="role\__init__.py" />
     <Compile Include="rpg.py" />
@@ -52,6 +59,11 @@
   <ItemGroup>
     <Folder Include="conf\" />
     <Folder Include="equ\" />
+    <Folder Include="battle\" />
+    <Folder Include="group\" />
+    <Folder Include="gamescreen\" />
+    <Folder Include="Items\" />
+    <Folder Include="make\" />
     <Folder Include="role\" />
     <Folder Include="save\" />
   </ItemGroup>

@@ -3,6 +3,7 @@
 # ## 
 
 import pygame
+import GlobalVar
 
 from Button import Button
 
@@ -25,7 +26,12 @@ class StartScreen(object):
         self.btConf=Button(upimage, downimage, (x, 210))
         self.btLoad=Button(upimage, downimage, (x, 330))
         self.btExit=Button(upimage, downimage, (x, 450))
-
+        
+        #self.buttons.append(self.btStart)
+        #self.buttons.append(self.btConf)
+        #self.buttons.append(self.btLoad)
+        #self.buttons.append(self.btExit)
+        
         self.bg = pygame.image.load(self.bgimage).convert_alpha()
 
 
@@ -39,9 +45,32 @@ class StartScreen(object):
 
         return 0
 
+    def OnStart(self):
+
+        return 0
+    def OnConf(self):
+
+        return 0
+    def OnLoad(self):
+
+        return 0
+
+    def OnExit(self):
+        GlobalVar.ScreenSelected=GlobalVar.SCREENMAKE
+        return 0
+
+
     def Events(self, events):
 
-
-
+        for event in events:
+            if event.type == pygame.MOUSEBUTTONUP:
+                if self.btStart.isOver():
+                    self.OnStart()
+                if self.btConf.isOver():
+                    self.OnConf()
+                if self.btLoad.isOver():
+                    self.OnLoad()
+                if self.btExit.isOver():
+                    self.OnExit()
         return 0
 
