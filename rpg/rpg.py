@@ -35,6 +35,9 @@ def run():
     clock = pygame.time.Clock()
 
     sc = StartScreen.StartScreen()
+    
+    GlobalVar.ScreenSelected=GlobalVar.SCREENMAIN
+
     ssss = GlobalVar.SCREENMAIN
 
     while True:

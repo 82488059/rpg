@@ -1,6 +1,8 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
 # ## 
+import pygame 
+
 
 class Button(object):
     def __init__(self, upimage, downimage, position):
@@ -19,7 +21,7 @@ class Button(object):
 
         return in_x and in_y
 
-    def render(self,screen):
+    def Render(self,screen):
         w, h = self.imageUp.get_size()
         x, y = self.position
         
