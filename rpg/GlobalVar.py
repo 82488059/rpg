@@ -1,0 +1,12 @@
+#!/usr/bin/python
+# -*- coding:utf-8 -*-
+# ## 
+
+SCREENMAIN=1
+SCREENGAME=2
+SCREENLOAD=3
+SCREENCONF=4
+
+ScreenSelected = SCREENMAIN
+
+

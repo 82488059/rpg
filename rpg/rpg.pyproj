@@ -23,10 +23,37 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Button.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="conf\__init__.py" />
+    <Compile Include="equ\EquBase.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="equ\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GlobalVar.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="role\HeroBase.py" />
+    <Compile Include="role\__init__.py" />
     <Compile Include="rpg.py" />
+    <Compile Include="save\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StartScreen.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|3.8" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="conf\" />
+    <Folder Include="equ\" />
+    <Folder Include="role\" />
+    <Folder Include="save\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
