@@ -8,15 +8,19 @@ from ctrl.Progress import Progress
 
 
 class HeroBase(object):
-    def __init__(self):
+    def __init__(self, pos=(0,0)):
         #
-        self.pos 
-        self.image
-        self.hpProgress=Progress()
-        self.mpProgress=Progress()
+        #hero.jpg
+        self.bgimage="src/hero.jpg"
+        self.image = pygame.image.load(self.bgimage).convert_alpha()
 
-        self.hpBase
-        self.mpBase
+        self.pos = pos
+        self.hpProgress=Progress(pos=(self.pos[0]+105, self.pos[1]+5), size=(80,20), color=(255,0,0), downcolor=(200,0,0))
+
+        self.mpProgress=Progress(pos=(self.pos[0]+105, self.pos[1]+30), size=(80,20), color=(0,0,255), downcolor=(0,0,200))
+
+        self.hpBase=0
+        self.mpBase=0
 
         # 最高血
         self.hpMax=0
@@ -55,11 +59,22 @@ class HeroBase(object):
 
         return 0
 
+    def SetPos(self, pos):
+        self.pos = pos
+        self.hpProgress.pos=(self.pos[0]+50, self.pos[1]+20)
+        self.mpProgress.pos=(self.pos[0]+50, self.pos[1]+60)
+        return 0
+
+    def Set(self, pos=None):
     
+        return 0
+
+
     def Render(self, screen):
         screen.blit(self.image, self.pos)
 
-
+        self.hpProgress.Render(screen)
+        self.mpProgress.Render(screen)
         return 0
 
 

@@ -33,7 +33,6 @@ class EquBase (object):
         # 额外属性
         self.ext={}
 
-
     def load(self, savejson):
         savejson={}
         #
@@ -46,6 +45,11 @@ class EquBase (object):
         savejson['ext2']={}
         
         savejson['ext3']={}
-
-
         return 0
+
+    def get_ext(self, n):
+        return self.ext[n]
+
+    def get_base(self, n):
+        return self.base[n]
+

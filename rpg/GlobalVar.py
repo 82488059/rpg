@@ -3,6 +3,7 @@
 # ## 
 import pygame 
 
+
 SCREENMAIN=1
 SCREENGAME=2
 SCREENLOAD=3
@@ -12,9 +13,10 @@ SCREENBATTLE=6
 SCREENMAKE=7
 
 ScreenSelected = SCREENMAIN
+ScreenSelectedBack = []
 
-font_path = "./SIMYOU.TTF"
-font_family = pygame.font.match_font("./SIMYOU.TTF")
+NowScreen=None
+font_family = "./SIMYOU.TTF"
 
 font_size=24
 

@@ -23,10 +23,16 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Button.py">
+    <Compile Include="combats\Combat.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="conf\__init__.py" />
+    <Compile Include="ctrl\Button.py" />
+    <Compile Include="ctrl\Progress.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ctrl\TextCtrl.py" />
+    <Compile Include="ctrl\TextInput.py" />
     <Compile Include="dialog\Dialog.py">
       <SubType>Code</SubType>
     </Compile>
@@ -64,13 +70,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="conf\" />
+    <Folder Include="ctrl\" />
     <Folder Include="equ\" />
-    <Folder Include="battle\" />
+    <Folder Include="combats\" />
     <Folder Include="group\" />
     <Folder Include="gamescreen\" />
     <Folder Include="Items\" />
     <Folder Include="make\" />
     <Folder Include="dialog\" />
+    <Folder Include="maps\" />
     <Folder Include="role\" />
     <Folder Include="save\" />
   </ItemGroup>

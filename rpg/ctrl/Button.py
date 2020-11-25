@@ -43,7 +43,7 @@ class ButtonRgb(object):
                  downcolor=(10,200,0),
                  text="",
                  textcolor=(0,0,0),
-                 font_family="./",
+                 font_family="./SIMYOU.TTF",
                  font_size=24):
         self.pos = pos
         self.size=size

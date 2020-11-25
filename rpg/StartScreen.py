@@ -1,11 +1,11 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
 # ## 
-
+# -*- coding:utf-8 -*-
 import pygame
 import GlobalVar
-
-from Button import Button
+from combats.Combat import Combat
+from ctrl.Button import Button
 
 upimage="src/bt.png"
 downimage="src/bt.png"
@@ -46,16 +46,24 @@ class StartScreen(object):
         return 0
 
     def OnStart(self):
-
+        cbsc = Combat()
+        cbsc.SetItems(None)
+        cbsc.SetMonsters(None)
+        GlobalVar.NowScreen = cbsc
+        GlobalVar.ScreenSelectedBack.append(GlobalVar.SCREENMAIN)
+        GlobalVar.ScreenSelected=GlobalVar.SCREENGAME
         return 0
+
     def OnConf(self):
 
         return 0
+
     def OnLoad(self):
 
         return 0
 
     def OnExit(self):
+        GlobalVar.ScreenSelectedBack.append(GlobalVar.ScreenSelected)
         GlobalVar.ScreenSelected=GlobalVar.SCREENMAKE
         return 0
 

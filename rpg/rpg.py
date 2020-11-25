@@ -11,6 +11,7 @@ from make import MakeEqu
 
 
 pygame.init()  # 初始化pygame
+pygame.font.init() 
 
 infoObject = pygame.display.Info()
 # full screen
@@ -39,9 +40,10 @@ def run():
     scmake = MakeEqu.MakeScreen()
 
     GlobalVar.ScreenSelected=GlobalVar.SCREENMAKE
-    #GlobalVar.ScreenSelected=GlobalVar.SCREENMAIN
+    GlobalVar.ScreenSelected=GlobalVar.SCREENMAIN
 
-     
+    
+
     while True:
         events = pygame.event.get()
 
@@ -50,7 +52,8 @@ def run():
         elif GlobalVar.SCREENLOAD == GlobalVar.ScreenSelected:
             print("load screen")
         elif GlobalVar.SCREENGAME == GlobalVar.ScreenSelected:
-            print("game screen")
+            GlobalVar.NowScreen.Render(screen)
+            GlobalVar.NowScreen.Events(events)
         elif GlobalVar.SCREENMAIN == GlobalVar.ScreenSelected:
             # print("one screen")
             sc.Events(events)
@@ -70,8 +73,7 @@ def run():
     return 0
 
 if __name__ == "__main__":
-    GlobalVar.font_family = pygame.font.match_font("./SIMYOU.TTF")
-
+    
     if run():
         print('make done!')
     else:
