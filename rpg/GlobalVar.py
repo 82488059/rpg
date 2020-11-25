@@ -13,5 +13,9 @@ SCREENMAKE=7
 
 ScreenSelected = SCREENMAIN
 
-
+font_path = "./SIMYOU.TTF"
 font_family = pygame.font.match_font("./SIMYOU.TTF")
+
+font_size=24
+
+

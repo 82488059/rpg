@@ -70,6 +70,8 @@ def run():
     return 0
 
 if __name__ == "__main__":
+    GlobalVar.font_family = pygame.font.match_font("./SIMYOU.TTF")
+
     if run():
         print('make done!')
     else:

@@ -27,6 +27,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="conf\__init__.py" />
+    <Compile Include="dialog\Dialog.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="dialog\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="equ\Equ.py">
       <SubType>Code</SubType>
     </Compile>
@@ -64,6 +70,7 @@
     <Folder Include="gamescreen\" />
     <Folder Include="Items\" />
     <Folder Include="make\" />
+    <Folder Include="dialog\" />
     <Folder Include="role\" />
     <Folder Include="save\" />
   </ItemGroup>
