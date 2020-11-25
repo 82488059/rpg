@@ -3,8 +3,18 @@
 # ## hero
 
 # 
+import pygame 
+from ctrl.Progress import Progress
+
+
 class HeroBase(object):
     def __init__(self):
+        #
+        self.pos 
+        self.image
+        self.hpProgress=Progress()
+        self.mpProgress=Progress()
+
         self.hpBase
         self.mpBase
 
@@ -43,7 +53,15 @@ class HeroBase(object):
 
     def load(self, savejson):
 
+        return 0
+
+    
+    def Render(self, screen):
+        screen.blit(self.image, self.pos)
+
 
         return 0
 
 
+    def Events(self, events):
+        return 0
